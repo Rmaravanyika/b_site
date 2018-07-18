@@ -13,8 +13,8 @@
     {% load staticfiles %}
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
     <!-- can be a interesting feature if developed nicely to avoid overiding some of the existing features  
     <link href="{% static '/css/w3customs.css' %}" rel="stylesheet" type="text/css"> -->
 
@@ -31,7 +31,7 @@
     <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link href="/static/css/carousel.css" rel="stylesheet">
     <style>
     .nav.navbar-nav.navbar-right li a {
     color: #FFD700;
@@ -39,6 +39,8 @@
     </style>
 
   </head>
+  <body>
+    <header>
       <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -60,11 +62,8 @@
 <!--/.nav-collapse -->
       </div>
     </nav>
-
-
-
-
-
+  </header>
+  <main role="main">
    {% block content %}
    {% endblock %}
    </br>
@@ -72,8 +71,7 @@
    </br>
    </br>
    </br>
-   </br>
-     
+   </br>  
     <footer style="background-color: black; text-decoration-color: white" class="footer">
       <div class="container">
 
@@ -84,6 +82,7 @@
    </br>
        </div>
     </footer>
+  </main>
 
 
 
@@ -102,8 +101,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
 
   </body>
 </html>
